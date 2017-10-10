@@ -1,6 +1,6 @@
 # ICB_code
 
-Here we share the code in our ICB paper "Tattoo Detection Based on CNN and Remarks on the NIST Database"
+Here we share the code for our ICB paper "Tattoo Detection Based on CNN and Remarks on the NIST Database"
 
 To use the code, please cite the paper:
 
