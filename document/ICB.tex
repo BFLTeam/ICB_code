@@ -1,0 +1,68 @@
+\documentclass[a4paper]{article}
+\usepackage{CJK}
+\usepackage{geometry}
+\geometry{left=3.5cm,right=3.5cm,top=3.5cm,bottom=3.5cm}
+\usepackage{fancyhdr}
+\usepackage{cite}
+\usepackage[colorlinks,linkcolor=red]{hyperref}
+\usepackage{graphicx}
+\usepackage{multirow} 
+\usepackage{array}
+
+\title{Experiment of Tattoo Detection Based on CNN and Remarks on the NIST Database}
+\author{XU QINGYONG\\E-mail:N1905179E@e.ntu.edu.sg, xyongle@163.com}
+
+\begin{document}
+
+		
+		
+		\pagestyle{fancy} 
+		\lhead{Note for ICB} \rhead{Author:Xu Qingyong}
+		\setcounter{page}{1}
+		\thispagestyle{empty}
+		\maketitle
+		
+%		\tableofcontents
+%		\newpage
+%		
+%		\setcounter{page}{1}
+		
+\section{Introduction}
+	This document introduces the experiment.
+	 
+	\begin{itemize}
+		\item Fold code: this is the experiment code. You can refer to document./code/cuda-convnet2/README.txt if you want to use it.
+		\item Fold Data: this is all data of experiment. It includes Flickr data-set.
+	\end{itemize}
+\section{Data-set}
+	Flickr dataset is downloaded from www.flickr.com.
+	 This includes Flickr2349 with 2349 images, Flickr3500 with 3500 images, Flickr5000  with 5000 images and Flickr10000 with 10000 images.\\
+	 Every data-set includes five groups and the ratio between tattoo and non-tattoo is same with NIST.
+	
+
+	
+\section{CODE}
+	
+	\begin{itemize}
+		\item 1, Install cuda-convnet. \\
+		The version is cuda-convnet2. The detail installed command is showed in the web:
+		https://code.google.com/archive/p/cuda-convnet2/.
+		\item 2, convent the jpg data-set to the format of cuda-convnet. \\
+		The code is showed in ./make-data/ICB\_makedata.py and the code to generate the meta 
+		file is showed with code ./ICB\_makemeta.py
+		\item 3. Net define. \\  The net file is located ./layers/
+		\item 4. Train. \\ The train commond is showed in the fold ./xyongle\_sh
+		
+	\end{itemize}
+
+	
+	
+
+
+
+\newpage
+\begin{thebibliography}{999}
+%	\bibitem{2015Ngan2}Ngan, M., Quinn, G. W., Grother, P. (2015). Tattoo Recognition Technology-Challenge (Tatt-C) Outcomes and Recommendations.
+	
+\end{thebibliography}
+\end{document}
